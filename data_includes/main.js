@@ -1,11 +1,12 @@
-var progressBarText = "წინ";
+//var progressBarText = "";
 
 PennController.DebugOff();
 
 PennController.ResetPrefix(null);
 
-PennController.Sequence("consent", randomize("spr"), "send")
-
+//PennController.Sequence("consent", randomize("spr"), "send")
+PennController.Sequence(randomize("spr"), "send")
+/*
 PennController("consent",
 	defaultText
         .print()
@@ -15,7 +16,7 @@ PennController("consent",
     ,
     newText("my_consent_clear", "<br/><br/>")
     ,
-    newText("name_text", "სახელი და გვარი:")
+    newText("name_text", "姓名:")
         .settings.center()
     ,
     newTextInput("name_response")
@@ -26,38 +27,20 @@ PennController("consent",
     ,
     newText("my_name_clear", "<br/><br/>")
     ,
-    newText("nationality", "ეროვნება")
+    newText("hometown", "出生地")
         .settings.center()
     ,
-    newTextInput("nationality_response")
+    newTextInput("hometown_response")
         .settings.log()
         .settings.length(100)
         .settings.center()
         .print()
     ,
-    newText("my_nationality_clear", "<br/><br/>"),
-    newText("job_text", "იმეილი:")
-        .settings.center()
+    newText("my_hometown_clear", "<br/><br/>")
+    
     ,
-    newTextInput("job_response")
-        .settings.log()
-        .settings.length(100)
-        .settings.center()
-        .print()
-    ,
-    newText("my_job_clear", "<br/><br/>")
-    ,
-    newText("phone", "ტელეფონი")
-        .settings.center()
-    ,
-    newTextInput("phone_response")
-        .settings.log()
-        .settings.length(100)
-        .settings.center()
-        .print()
-    ,
-    newText("my_phone_clear", "<br/><br/>"),
-    newText("age_text", "ასაკი:")
+   
+    newText("age_text", "年龄:")
         .settings.center()
     ,
     newTextInput("age_response")
@@ -68,32 +51,22 @@ PennController("consent",
     ,
     newText("my_age_clear", "<br/><br/>")
     ,
-    newText("gender_text", "სქესი:")
+    newText("gender_text", "性别:")
         .settings.center()
     ,
-    newScale("gender_response", "კაცი", "ქალი ")
+    newScale("gender_response", "男", "女 ")
         .settings.log()
         .settings.labelsPosition("right")
         .settings.center()
         .print()
     ,
     newText("my_gender_clear", "<br/><br/>")
+   
     ,
-    newText("town_text", "საცხოვრებელი ქალაქი:")
-         .settings.center()
-    ,
-    newTextInput("town_response")
-        .settings.log()
-        .settings.length(100)
-        .settings.center()
-        .print()
-    ,
-    newText("my_town_clear", "<br/><br/>")
-    ,
-    newText("native_lang_text", "ქართული თქვენი მშობლიური ენაა?")
+    newText("native_lang_text", "请问您是否平时讲普通话?")
         .settings.center()
     ,
-    newScale("native_lang_response", "კი", "არა")
+    newScale("native_lang_response", "是", "否")
         .settings.log()
         .settings.labelsPosition("right")
         .settings.center()
@@ -101,7 +74,7 @@ PennController("consent",
     ,
     newText("my_native_lang_clear", "<br/><br/>")
     ,
-    newText("other_lang_text", "სხვა ენები, რომელთაც ფლობთ:")
+    newText("other_lang_text", "请问您除了普通话之外，平时是否使用其他方言:")
         .settings.center()
     ,
     newTextInput("other_lang_response")
@@ -112,29 +85,13 @@ PennController("consent",
     ,
     newText("my_other_lang_clear", "<br/><br/>")
     ,
-    newText("lang_to_parents_text", "რა ენაზე საუბრობდით თქვენს მშობლებთან?")
-        .settings.center()
-    ,
-    newDropDown("lang_to_parents", "")
-        .settings.add("ქართული", "მეგრული", "რუსული", "სომხური", "აზერბაიჯანული")
-        .settings.center()
-        .print()
-    ,
-    newText("my_lang_to_parents_clear", "<br/><br/>"),
-    newText("lang_at_home_text", "რა ენაზე საუბრობთ ახლა სახლში?")
-        .settings.center()
-    ,
-    newDropDown("lang_at_home", "")
-        .settings.add("ქართული", "მეგრული", "რუსული", "სომხური", "აზერბაიჯანული")
-        .settings.center()
-        .print()
-    ,
-    newText("my_lang_at_home_clear", "<br/><br/>"),
-    newButton("consent button", "თანახმა ვარ, მივიღო ექსპერიმენტში მონაწილეობა")
+    newButton("consent button", "我已阅读以上说明，并同意接受语感调查。")
         .settings.center()
         .print()
         .wait()
 );
+*/
+
 
 PennController.Template("GeorgianSelfPacedReadingStimuli.csv",
     row => [
