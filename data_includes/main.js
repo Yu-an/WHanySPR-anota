@@ -93,10 +93,10 @@ PennController("consent",
 */
 
 
-PennController.Template("GeorgianSelfPacedReadingStimuli.csv",
+PennController.Template("WhanySPR-anota-L1.csv",
     row => [
         "spr", "DashedSentence", {s: row.Sentence, display: "in place"},
-        ...(row.Question !==  "" ? ["Question", {q: row.Question, as: ["დიახ", "არა"], hasCorrect: row.Answer}] : [])
+        ...(row.Question !==  "" ? ["Question", {q: row.Response, as: ["接受", "不接受"]] : [])
     ]
 );
 
